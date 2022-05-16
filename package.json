@@ -1,0 +1,22 @@
+{
+  "name": "main.js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "exercisesForJS.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TuDiHocLapTrinh/practicesForJS.git"
+  },
+  "author": "TuDepZai",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TuDiHocLapTrinh/practicesForJS/issues"
+  },
+  "homepage": "https://github.com/TuDiHocLapTrinh/practicesForJS#readme",
+  "devDependencies": {
+    "jest": "^28.1.0"
+  }
+}

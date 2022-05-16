@@ -1,8 +1,3 @@
-/**
- * @param {string} s
- * @return {number}
- */
-
 const romanNumber = new Map([
   ["I", 1],
   ["V", 5],
@@ -13,15 +8,24 @@ const romanNumber = new Map([
   ["M", 1000],
 ]);
 
-var romanToInt = function (s) {
+/**
+ * @param {string} str
+ * @return {number}
+ * function convert roman to integer
+ */
+const romanToInt = function (str) {
   let number = 0;
-  const sToArray = s.split("");
-  for (let i = 0; i < sToArray.length; i++) {
-    if (romanNumber.get(sToArray[i]) < romanNumber.get(sToArray[i + 1])) {
-      number -= romanNumber.get(sToArray[i]);
+  const stringToArray = str.split("");
+  for (let i = 0; i < stringToArray.length; i++) {
+    if (
+      romanNumber.get(stringToArray[i]) < romanNumber.get(stringToArray[i + 1])
+    ) {
+      number -= romanNumber.get(stringToArray[i]);
     } else {
-      number += romanNumber.get(sToArray[i]);
+      number += romanNumber.get(stringToArray[i]);
     }
   }
   return number;
 };
+
+module.exports = romanToInt;
