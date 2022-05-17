@@ -5,7 +5,8 @@ describe("should return integer from roman", () => {
     expect(romanToInt("XX")).toBe(20);
   });
 
-  it("should be return 100", () => {
+  //  nếu chỉ muốn chạy 1 case này thì thêm it.only
+  it.only("should be return 100", () => {
     expect(romanToInt("C")).toBe(100);
   });
 });
