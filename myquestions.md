@@ -1,3 +1,4 @@
-#Cau Hoi cua Tu
+# Cau Hoi cua Tu
+
 1. Su khac nhau giua call() va aplly() ? Khi nao thi su dung cai nao ?
-2. Trong 3 kieu inline, external, internal thi nen dung kieu nao khi viet css.
+3. Trong 3 kieu inline, external, internal thi nen dung kieu nao khi viet css.
