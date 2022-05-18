@@ -18,5 +18,10 @@
   "homepage": "https://github.com/TuDiHocLapTrinh/practicesForJS#readme",
   "devDependencies": {
     "jest": "^28.1.0"
+  },
+  "dependencies": {
+    "image-downloader": "^4.3.0",
+    "moment": "^2.29.3",
+    "puppeteer": "^14.1.0"
   }
 }
