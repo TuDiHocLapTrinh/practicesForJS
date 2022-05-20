@@ -12,6 +12,7 @@ const path = require("path");
   const imgLinks = await page.evaluate(() => {
     let imgElements = document.querySelectorAll(".photo-img.item img");
 
+    // cai nay don gian la ben duoi t co dung ham map, ma ham map chi chay duoc cho array nen la tao clone sang dang array
     imgElements = [...imgElements];
 
     const imgLinksTmp = imgElements.map((item) => item.getAttribute("src"));

@@ -42,6 +42,8 @@ function inputIsString(input) {
   let is_String = false;
   if (typeof input === "string") is_String = true;
   return is_String;
+  // Cai nay chi can viet thay ca 3 dong tren thanh
+  // return typeof input === "string";
 }
 
 /** Write a JavaScript function to check whether a string is blank or not
@@ -52,6 +54,8 @@ function strIsBlank(str) {
   let is_Blank = false;
   is_Blank = str.length === 0 ? true : false;
   return is_Blank;
+  // Cai nay chi can viet thay ca 3 dong tren thanh
+  // return str.length === 0;
 }
 
 /**Write a JavaScript function to split a string and convert it into an array of words
@@ -86,6 +90,8 @@ function abbreviatedForm(str) {
 function toHideEmail(str) {
   let hidenEmail = str.replace(str.slice(4, str.indexOf("@")), "****");
   return hidenEmail;
+
+  // return str.replace(str.slice(4, str.indexOf("@")), "****");
 }
 
 /**Write a JavaScript function to parameterize a string
