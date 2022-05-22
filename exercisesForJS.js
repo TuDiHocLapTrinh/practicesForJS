@@ -97,15 +97,42 @@ function toHideEmail(str) {
 /**Write a JavaScript function to parameterize a string
  *
  */
+function stringParameterize(str) {
+  return str.toLowerCase().split(" ").join("-");
+}
 
 /**Write a JavaScript function to capitalize the first letter of a string
  *
  */
+function capitalize(str) {
+  return str.trim().replace(str[0], str[0].toUpperCase());
+}
 
 /**Write a JavaScript function to capitalize the first letter of each word in a string
  *
  */
+function capitalizeFirstLetter(str) {
+  const strToArr = str
+    .trim()
+    .split(" ")
+    .map((value) => capitalize(value));
+  return strToArr.join(" ");
+}
 
 /**Write a JavaScript function that takes a string which has lower and upper case letters
  * as a parameter and converts upper case letters to lower case, and lower case letters to upper case
  */
+function caseSwap(str) {
+  const strToArr = str
+    .trim()
+    .split("")
+    .map((value) => {
+      if (value.charCodeAt(0) >= 65 && value.charCodeAt(0) <= 90)
+        return value.toLowerCase();
+      if (value.charCodeAt(0) >= 97 && value.charCodeAt(0) <= 122)
+        return value.toUpperCase();
+    });
+  return strToArr.join("");
+}
+
+module.exports = { capitalize, capitalizeFirstLetter, caseSwap };
