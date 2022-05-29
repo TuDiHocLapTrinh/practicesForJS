@@ -135,4 +135,64 @@ function caseSwap(str) {
   return strToArr.join("");
 }
 
-module.exports = { capitalize, capitalizeFirstLetter, caseSwap };
+/**
+ * Write a JavaScript function to get the first element of an array.
+ * Passing a parameter 'n' will return the first 'n' elements of the array.
+ */
+function firstInArray(arr, n) {
+  if (n === undefined) return arr[0];
+  return n > 1 ? arr.slice(0, n) : n === 1 ? arr[0] : [];
+}
+
+/**
+ *Write a JavaScript function to get the last element of an array.
+ *Passing a parameter 'n' will return the last 'n' elements of the array.
+ */
+
+function lastInArray(arr, n) {
+  if (n === undefined) return arr[arr.length - 1];
+  return n > 1 ? arr.slice(-n) : n === 1 ? arr[arr.length - 1] : [];
+}
+
+/**
+ * Write a JavaScript program which accept a number as input and insert dashes (-) between each two even numbers.
+ */
+function insertDashes(num) {
+  let str = num.toString();
+  let strToArr = str.split("");
+  let oldValue = "1";
+  let output = strToArr.map((value) => {
+    if (Number(value) % 2 === 0 && Number(oldValue) % 2 === 0) {
+      oldValue = value;
+      value = "-" + value;
+    }
+    oldValue = value;
+    return value;
+  });
+  return output.join("");
+}
+
+/**
+ *Write a JavaScript program to find the most frequent item of an array.
+ */
+function mostFrequent(arr) {
+  let obj = {};
+  let max = 0;
+  let maxValue = "";
+  arr.forEach(function (value) {
+    if (!obj[value]) {
+      obj[value] = 1;
+    } else {
+      obj[value]++;
+    }
+    if (obj[value] > max) {
+      max = obj[value];
+      maxValue = value;
+    } else if (obj[value] === max) {
+      maxValue += "," + value;
+    }
+  });
+  return maxValue;
+}
+
+module.exports = { mostFrequent };
